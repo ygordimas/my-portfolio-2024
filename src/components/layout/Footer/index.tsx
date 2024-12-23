@@ -1,17 +1,30 @@
 import React from 'react';
 import { Instagram, GithubCircle } from 'iconoir-react';
+import { motion } from 'motion/react';
+import FooterHorizontalRibbon from './FooterHorizontalRibbon';
+import FooterSocialMediaIcons from './FooterSocialMediaIcons';
+import { useModalContext } from '../../../services/ModalContext';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
+  const location = useLocation();
+  const { isHamburgerMenuOpen } = useModalContext();
+
+  const rendersWhen = !isHamburgerMenuOpen && location.pathname === '/';
   return (
-    <div className="w-[calc(100%-32px)] px-10 h-min z-40 text-xs flex flex-col items-center justify-center bg-gray-50 text-paper-light backdrop-filter backdrop-blur-lg bg-opacity-10 rounded-lg border border-gray-200/25 shadow-[0_0px_4px_0_rgba(85,127,173,0.4)]">
-      <div className="text-inherit px-4">
-        designed & developed by Ygor Dimas
-      </div>
-      <div className="flex gap-2 items-center">
-        <Instagram />
-        <GithubCircle />
-      </div>
-    </div>
+    <>
+      {rendersWhen && (
+        <div className="flex flex-col w-full items-center gap-2 z-40 absolute bottom-0 overflow-hidden">
+          <div className="glassmorph self-end mr-2">
+            <FooterSocialMediaIcons />
+            {/* <div className=" px-4 font-paragraph ">
+            designed & developed by Ygor Dimas
+          </div> */}
+          </div>
+          <FooterHorizontalRibbon duration={18} />
+        </div>
+      )}
+    </>
   );
 };
 

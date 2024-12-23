@@ -6,17 +6,17 @@ import { useLocation, useParams } from 'react-router-dom';
 const Layout = ({ children }) => {
   const params = useParams();
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
   return (
     <>
       <div className="flex w-full h-full relative font-paragraph">
         <Header />
         <div
-          className={`${location.pathname !== '/' && `pt-28 px-6 pb-8`} box-border grow`}
+          className={`${location.pathname !== '/' && `pt-24 lg:pt-28 px-2 pb-8`} box-border grow w-full`}
         >
           {children}
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );

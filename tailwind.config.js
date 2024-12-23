@@ -5,8 +5,8 @@ export default {
     extend: {
       fontFamily: {
         primary: ['Barstukai', 'sans-serif'],
-        secondary: ['LaborUnion Regular', 'serif'],
-        paragraph: ['KulimPark', 'sans-serif'],
+        secondary: ['Touillette', 'sans-serif'],
+        paragraph: ['Gidolinya', 'serif'],
       },
       colors: {
         accents: {
@@ -24,6 +24,15 @@ export default {
           regular: '#3D3D3D',
           dark: '#232323',
         },
+      },
+      keyframes: {
+        infiniteScroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(0px - 50%))' },
+        },
+      },
+      animation: {
+        infiniteScroll: 'infiniteScroll 10s linear infinite',
       },
     },
   },

@@ -1,10 +1,10 @@
 import { useMediaQuery } from '@uidotdev/usehooks';
-import { ArrowLeftTag, ArrowRightTag } from 'iconoir-react';
+import { ArrowLeft, ArrowRight } from 'iconoir-react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
-import { ProjectsProps } from '../../utils/types/types';
+import { ProjectsProps } from '../../../utils/types/types';
 import { useEffect } from 'react';
-import formatTitle from '../../utils/formatTitle';
+import formatTitle from '../../../utils/formatTitle';
 
 type ArtworksNavigationButton = {
   action: string;
@@ -22,7 +22,7 @@ const ArtworksNavigationButton = ({
   const path = params.path;
   const isLargeScreen = useMediaQuery('only screen and (min-width : 1280px)');
   const navigate = useNavigate();
-  const arrowSizes = isLargeScreen ? '4rem' : '3rem';
+  const arrowSizes = isLargeScreen ? '4rem' : '2rem';
   const currentArtwork = projects.find((element) => element.id === id);
   const currentIndex = projects.findIndex((element) => element.id === id);
 
@@ -66,13 +66,13 @@ const ArtworksNavigationButton = ({
       to={`${action === 'previous' ? getPreviousProject(projects, currentIndex) : getNextProject(projects, currentIndex)}`}
     >
       {action === 'previous' ? (
-        <ArrowLeftTag
+        <ArrowLeft
           width={arrowSizes}
           height={arrowSizes}
           className="text-accents-light hover:text-accents-regular active:text-accents-dark"
         />
       ) : (
-        <ArrowRightTag
+        <ArrowRight
           width={arrowSizes}
           height={arrowSizes}
           className="text-accents-light hover:text-accents-regular active:text-accents-dark"

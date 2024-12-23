@@ -33,16 +33,10 @@ const Gallery = () => {
   const galleryFinder = () => {
     if (galleryId === 'abstracts') return abstracts;
     else if (galleryId === 'illustrations') return illustrations;
-    else if (galleryId === 'gameart') return gameart;
+    else return gameart;
   };
   return (
-    <>
-      {!isHamburgerMenuOpen && (
-        <div className="w-full grow">
-          <GalleryGrid projects={galleryFinder()} />
-        </div>
-      )}
-    </>
+    <>{!isHamburgerMenuOpen && <GalleryGrid projects={galleryFinder()} />}</>
   );
 };
 
