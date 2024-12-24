@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import { useLocation, useParams } from 'react-router-dom';
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   const params = useParams();
   const location = useLocation();
   // console.log(location);

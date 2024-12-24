@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useMediaQuery } from '@uidotdev/usehooks';
 
 import getProjectsList from '../../utils/getProjectsList';
 import formatTitle from '../../utils/formatTitle';
-
-import { ProjectsProps } from '../../utils/types/types';
-import ArtworkNavigation from '../../components/layout/Artwork/ArtworkNavigation';
-import ArtworkDetails from './ArtworkDetails';
-import ArtworkCoverImage from '../../components/layout/Artwork/ArtworkCoverImage';
 import Artwork from '../../components/layout/Artwork';
 
 const ArtworkPage = () => {

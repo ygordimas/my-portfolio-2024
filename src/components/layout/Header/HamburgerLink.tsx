@@ -2,7 +2,12 @@ import { SparkSolid } from 'iconoir-react';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const HamburgerLink = ({ tag, to }) => {
+type HamburgerLinkType = {
+  tag: string;
+  to: string;
+};
+
+const HamburgerLink = ({ tag, to }: HamburgerLinkType) => {
   const basicStyles = 'text-xl rounded p-4';
   return (
     <NavLink
