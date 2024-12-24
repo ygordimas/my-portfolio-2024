@@ -28,7 +28,7 @@ const Effects = () => {
   return (
     <EffectComposer>
       <DotScreen
-        blendFunction={BlendFunction.COLOR} // blend mode
+        blendFunction={BlendFunction.SUBTRACT} // blend mode
         angle={Math.PI * 0.5} // angle of the dot pattern
         scale={0.85} // scale of the dot pattern
       />

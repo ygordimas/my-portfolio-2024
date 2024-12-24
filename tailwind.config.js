@@ -15,9 +15,9 @@ export default {
           dark: '#1916ab',
         },
         paper: {
-          light: '#eef2e6',
-          regular: '#D1D8C5',
-          dark: '#afb5a5',
+          light: '#F8FFFF',
+          regular: '#e9fffd',
+          dark: '#D1EAF0',
         },
         type: {
           light: '#4E4E4E',

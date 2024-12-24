@@ -18,7 +18,7 @@ const FooterHorizontalRibbon = ({ duration = 16 }) => {
     'AR/VR',
   ];
   return (
-    <div className="w-full flex bg-accents-light py-4 font-paragraph text-xl text-paper-light tracking-widest">
+    <div className="w-full flex bg-accents-light py-2.5 font-paragraph text-xl text-paper-light tracking-widest">
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: '-100%' }}

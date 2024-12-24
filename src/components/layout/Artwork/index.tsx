@@ -18,13 +18,12 @@ const Artwork = () => {
     (element) => formatTitle(element.title) === title
   );
   return (
-    <div className="flex flex-col gap-2 justify-between">
+    <div className="grid grid-cols-3  xl:justify-start w-full h-full gap-2 xl:auto-rows-[minmax(0,fit-content)]">
       <ArtworkDetails artwork={isCurrentArtwork} />
-      <div className="flex w-full h-full">
-        <ArtworkCoverImage imageUrl={isCurrentArtwork!.cover} />
-      </div>
 
-      <div className="flex flex-wrap justify-center text-xs gap-1 text-paper-light">
+      <ArtworkCoverImage imageUrl={isCurrentArtwork!.cover} />
+
+      <div className="col-span-3 col-start-1 flex flex-wrap justify-center text-xs gap-1 text-paper-light">
         {isCurrentArtwork?.tools.map((tool) => (
           <div className="bg-accents-regular py-1 px-1  whitespace-pre">
             {tool}

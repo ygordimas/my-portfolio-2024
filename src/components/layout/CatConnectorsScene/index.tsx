@@ -8,7 +8,7 @@ import CatHeadModel from './CatHeadModel';
 import Pointer from './Pointer';
 import Effects from './Effects';
 
-const accents = ['#ffec82', '#ffcc00', '#93ffd0', '#002aff'];
+const accents = ['#aaffd0', '#bbefff', '#91fbff', '#284cff'];
 const shuffle = (accent = 0) => [
   { color: '#9c9c9c', roughness: 0.1, metalness: 1 },
   { color: '#9c9c9c', roughness: 0.1, metalness: 1 },
@@ -57,7 +57,7 @@ export default function CatConnectorsScene(props) {
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
       />
-      <color attach="background" args={['#f3e1e1']} />
+      <color attach="background" args={['#e9fffd']} />
       <Physics timeStep="vary" gravity={[0, 0, 0]}>
         <Pointer />
         {connectors.map((props, i) => (

@@ -1,41 +1,29 @@
-import React from 'react';
 import emailjs from '@emailjs/browser';
 import FormField from './FormField';
 import { FormData, EmailSchema } from '../../../utils/types/types';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { MailOutSolid, EmojiPuzzled, WarningTriangle } from 'iconoir-react';
 import { useMediaQuery } from '@uidotdev/usehooks';
+import SuccessMessage from './SuccessMessage';
+import SubmitButton from './SubmitButton';
+import ErrorWarning from './ErrorWarning';
+
+// export const fieldStyles =
+//   'w-full px-4 py-2 bg-accents-regular box-border  text-base text-paper-light font-paragraph  rounded-sm  focus:outline-none placeholder-type-light placeholder:font-neutralface focus:placeholder-accents-light placeholder:text-sm placeholder:tracking-wider focus:border-accents-regular focus:ring-4 focus:ring-accents-light';
 
 export const fieldStyles =
-  'px-4 py-2 border border-accents-light text-sm text-type-regular font-clashdisplay bg-paper-light rounded shadow shadow-accents-dark focus:outline-none placeholder-type-light placeholder:font-neutralface focus:placeholder-accents-light placeholder:text-xs placeholder:tracking-wider focus:border-accents-regular focus:ring-4 focus:ring-accents-light';
+  'w-full px-4 py-2 bg-paper-light box-border  text-base text-type-regular font-paragraph  rounded-lg  focus:outline-none placeholder-type-light placeholder:font-neutralface focus:placeholder-accents-light placeholder:text-sm placeholder:tracking-wider focus:border-accents-regular focus:ring-4 focus:ring-accents-light';
 
-const ErrorWarning = ({ message }) => {
-  return (
-    <div className="flex gap-1 text-xs items-center">
-      <span className="bg-paper-light rounded-full p-1">
-        <WarningTriangle className="text-red-600" />
-      </span>
-      <p className="text-red-600">{message}</p>
-    </div>
-  );
-};
-
-const SubmitButton = ({ isValid }) => {
-  const invalidStyles =
-    'cursor-not-allowed bg-paper-regular border-paper-dark hover:border-paper-dark pointer-events-none';
-  const validStyles = 'cursor-pointer bg-accents-regular text-paper-light';
-
-  return (
-    <button
-      className={`flex gap-2 items-center justify-center self-end tracking-wider ${isValid ? validStyles : invalidStyles}`}
-      type="submit"
-    >
-      Submit
-      <MailOutSolid />
-    </button>
-  );
-};
+// const ErrorWarning = ({ message }) => {
+//   return (
+//     <div className="flex gap-1 text-xs items-center">
+//       <span className="bg-paper-light rounded-full p-1">
+//         <WarningTriangle className="text-red-600" />
+//       </span>
+//       <p className="text-red-600">{message}</p>
+//     </div>
+//   );
+// };
 
 const ContactForm = () => {
   const {
@@ -69,15 +57,13 @@ const ContactForm = () => {
       .catch((error) => {});
   };
 
-  console.log(errors);
-
   return (
     <>
       {isSubmitSuccessful ? (
-        <div>E-mail sent! Will get back to you as soon as possible.</div>
+        <SuccessMessage />
       ) : (
         <form
-          className="flex flex-col w-[92%] max-w-[500px] shadow-md shadow-accents-light border-paper-dark rounded bg-paper-regular border-2 p-4 gap-4"
+          className="mx-auto flex flex-col items-center gap-2 lg:w-1/2"
           onSubmit={handleSubmit(onSubmit)}
         >
           <FormField
@@ -96,15 +82,17 @@ const ContactForm = () => {
             error={errors.email}
           />
 
-          <textarea
-            className={fieldStyles}
-            id="message"
-            placeholder="Please write your message here."
-            {...register('message')}
-            rows={!IsNotLargeScreen ? 14 : 5}
-          />
+          <div className="p-0.5 w-full bg-gradient-to-t from-accents-light via-paper-regular to-paper-light rounded-lg">
+            <textarea
+              className={fieldStyles}
+              id="message"
+              placeholder="Please write your message here."
+              {...register('message')}
+              rows={!IsNotLargeScreen ? 14 : 5}
+            />
+          </div>
           {Object.keys(errors).length > 0 && (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 self-end">
               {errors.hasOwnProperty('name') && (
                 <ErrorWarning message="Please insert a valid name." />
               )}

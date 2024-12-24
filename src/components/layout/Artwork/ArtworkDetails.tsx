@@ -3,7 +3,7 @@ import { ProjectsProps } from '../../../utils/types/types';
 
 const ArtworkDetails = ({ artwork }: { artwork: ProjectsProps }) => {
   return (
-    <div className="flex flex-col w-full">
+    <div className="col-start-1 col-span-3 flex flex-col w-full">
       <h1 className="bg-accents-regular p-2 text-paper-light">
         {artwork.title}
       </h1>

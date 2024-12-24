@@ -6,7 +6,7 @@ import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
 import ErrorPage from './pages/ErrorPage.tsx';
 import Gallery from './pages/Gallery.tsx';
 import { ModalProvider } from './services/ModalContext.tsx';
-import Contact from './pages/Contact.tsx';
+import Contact from './pages/ContactPage/Contact.tsx';
 import Home from './pages/Home.tsx';
 import Layout from './pages/Layout.tsx';
 import ArtworkPage from './pages/ArtworkPage/index.tsx';

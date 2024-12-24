@@ -30,7 +30,7 @@ const ArtworkNavigation = ({
 
   return (
     <>
-      <div className="flex flex-col gap-1 justify-between items-center">
+      <div className="col-span-3 flex flex-col h-min gap-1 justify-between items-center">
         <div className="w-full h-[2px] bg-accents-light"></div>
         <div className="flex w-full justify-between items-center">
           <ArtworksNavigationButton

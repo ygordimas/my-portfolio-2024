@@ -4,7 +4,7 @@ import React from 'react';
 const ArtworkCoverImage = ({ imageUrl }: { imageUrl: string }) => {
   return (
     <motion.div
-      className="grow overflow-hidden"
+      className="col-span-3 col-start-1 flex justify-center w-full h-full "
       initial={{
         opacity: 10,
         scale: 1,
@@ -19,9 +19,7 @@ const ArtworkCoverImage = ({ imageUrl }: { imageUrl: string }) => {
       }}
       transition={{ duration: 0.2, delay: 0.1, ease: 'linear' }}
     >
-      <div className="w-full h-full flex">
-        <img src={imageUrl} className="object-contain w-min h-full" alt="" />
-      </div>
+      <img src={imageUrl} className="object-contain w-min h-full" alt="" />
     </motion.div>
   );
 };
