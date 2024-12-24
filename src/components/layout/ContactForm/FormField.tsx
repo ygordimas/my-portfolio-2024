@@ -8,7 +8,6 @@ const FormField: React.FC<FormFieldProps> = ({
   placeholder,
   name,
   register,
-  error,
 }) => {
   return (
     <>
@@ -20,7 +19,6 @@ const FormField: React.FC<FormFieldProps> = ({
           {...register(name)}
         />
       </div>
-      {/* {error && <span className="text-red-500">{error.message}</span>} */}
     </>
   );
 };

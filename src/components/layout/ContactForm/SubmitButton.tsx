@@ -1,8 +1,7 @@
 import { MailOutSolid } from 'iconoir-react';
 import { motion } from 'motion/react';
-import React from 'react';
 
-const SubmitButton = ({ isValid }) => {
+const SubmitButton = ({ isValid }: { isValid: boolean }) => {
   const buttonVariants = {
     initial: {
       scale: 1,

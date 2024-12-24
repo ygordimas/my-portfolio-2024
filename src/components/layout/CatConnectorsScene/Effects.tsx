@@ -1,13 +1,5 @@
-import {
-  EffectComposer,
-  DotScreen,
-  Noise,
-  DepthOfField,
-  Bloom,
-  Vignette,
-} from '@react-three/postprocessing';
+import { EffectComposer, DotScreen } from '@react-three/postprocessing';
 import { BlendFunction } from 'postprocessing';
-import { useControls } from 'leva';
 
 const Effects = () => {
   // const { angle, scale } = useControls({

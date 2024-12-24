@@ -1,9 +1,8 @@
-import * as THREE from 'three';
-import { useRef, useReducer, useMemo } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Environment, Lightformer, useGLTF } from '@react-three/drei';
-import { BallCollider, Physics, RigidBody } from '@react-three/rapier';
-import { easing } from 'maath';
+import { useReducer, useMemo } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { Environment } from '@react-three/drei';
+import { Physics } from '@react-three/rapier';
+
 import CatHeadModel from './CatHeadModel';
 import Pointer from './Pointer';
 import Effects from './Effects';
@@ -37,7 +36,7 @@ const shuffle = (accent = 0) => [
   { color: accents[accent], roughness: 0.1, accent: true },
 ];
 
-export default function CatConnectorsScene(props) {
+export default function CatConnectorsScene(props: Record<string, any>) {
   const [accent, click] = useReducer((state) => ++state % accents.length, 0);
   const connectors = useMemo(() => shuffle(accent), [accent]);
   return (

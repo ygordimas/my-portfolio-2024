@@ -1,6 +1,6 @@
 import { WarningTriangle } from 'iconoir-react';
 
-const ErrorWarning = ({ message }) => {
+const ErrorWarning = ({ message }: { message: string }) => {
   return (
     <div className="flex gap-1 text-xs items-center">
       <span className="bg-paper-light rounded-full p-1">

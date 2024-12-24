@@ -19,11 +19,11 @@ const ArtworksNavigationButton = ({
 }: ArtworksNavigationButton) => {
   const params = useParams();
   const gallery = params.galleryId;
-  const path = params.path;
+
   const isLargeScreen = useMediaQuery('only screen and (min-width : 1280px)');
   const navigate = useNavigate();
   const arrowSizes = isLargeScreen ? '4rem' : '2rem';
-  const currentArtwork = projects.find((element) => element.id === id);
+
   const currentIndex = projects.findIndex((element) => element.id === id);
 
   const getNextProject = (projects: ProjectsProps[], currentIndex: number) => {

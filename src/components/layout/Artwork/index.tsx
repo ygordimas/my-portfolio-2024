@@ -1,4 +1,3 @@
-import React from 'react';
 import ArtworkCoverImage from './ArtworkCoverImage';
 import ArtworkNavigation from './ArtworkNavigation';
 import ArtworkDetails from './ArtworkDetails';
@@ -19,7 +18,7 @@ const Artwork = () => {
   );
   return (
     <div className="grid grid-cols-3  xl:justify-start w-full h-full gap-2 xl:auto-rows-[minmax(0,fit-content)]">
-      <ArtworkDetails artwork={isCurrentArtwork} />
+      <ArtworkDetails artwork={isCurrentArtwork!} />
 
       <ArtworkCoverImage imageUrl={isCurrentArtwork!.cover} />
 
@@ -33,9 +32,9 @@ const Artwork = () => {
 
       <ArtworkNavigation
         id={isCurrentArtwork!.id}
-        projects={projects}
+        projects={projects!}
         action="previous"
-        galleryId={galleryId}
+        galleryId={galleryId!}
       />
     </div>
   );

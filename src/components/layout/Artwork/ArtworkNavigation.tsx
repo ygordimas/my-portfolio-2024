@@ -1,8 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ProjectsProps } from '../../../utils/types/types';
 import ArtworksNavigationButton from './ArtworksNavigationButton';
-import { useMediaQuery } from '@uidotdev/usehooks';
 
 const ReturnToGallery = ({ galleryId }: { galleryId: string }) => {
   return (
@@ -16,7 +14,6 @@ const ReturnToGallery = ({ galleryId }: { galleryId: string }) => {
 };
 
 const ArtworkNavigation = ({
-  action,
   projects,
   id,
   galleryId,
@@ -26,8 +23,6 @@ const ArtworkNavigation = ({
   id: string;
   galleryId: string;
 }) => {
-  const isLaptop = useMediaQuery('only screen and (min-width : 1280px)');
-
   return (
     <>
       <div className="col-span-3 flex flex-col h-min gap-1 justify-between items-center">

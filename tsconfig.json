@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "lib": ["ES2021.String", "esnext.string"],
-    "strict": true
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   },
   "files": [],
   "references": [

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ProjectsProps } from '../../../utils/types/types';
 
 const ArtworkDetails = ({ artwork }: { artwork: ProjectsProps }) => {
