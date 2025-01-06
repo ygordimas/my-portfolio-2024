@@ -1,8 +1,7 @@
 const formatTitle = (title: string) => {
-  return title
-    .toLowerCase()
-    .replace(new RegExp(' ', 'g'), '-')
-    .replace(new RegExp(':', 'g'), '-');
+  const regex = /[^a-zA-Z0-9]/g;
+  const result = title.replace(regex, '-').toLowerCase();
+  return result;
 };
 
 export default formatTitle;

@@ -1,15 +1,15 @@
 import React from 'react';
 
 const GalleryGridCellImage = ({
-  cover,
+  coverImg,
   coveralt,
 }: {
-  cover: string;
+  coverImg: string;
   coveralt: string;
 }) => {
   return (
     <img
-      src={cover}
+      src={coverImg}
       alt={coveralt}
       className="w-full object-cover touch-pan-y pointer-events-none"
     />

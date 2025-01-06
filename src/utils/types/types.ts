@@ -26,13 +26,9 @@ export const EmailSchema: ZodType<FormData> = z.object({
 export type ProjectsProps = {
   id: string;
   title: string;
-  path?: string;
-  type: string;
-  cover: string;
-  wips?: string[];
-  coveralt: string;
+  images: { src: string; alt: string }[];
   description: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   tools: string[];
 };

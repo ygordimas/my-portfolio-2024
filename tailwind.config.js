@@ -6,7 +6,7 @@ export default {
       fontFamily: {
         primary: ['Barstukai', 'sans-serif'],
         secondary: ['Touillette', 'sans-serif'],
-        paragraph: ['Gidolinya', 'serif'],
+        paragraph: ['Plus Jakarta', 'sans-serif'],
       },
       colors: {
         accents: {

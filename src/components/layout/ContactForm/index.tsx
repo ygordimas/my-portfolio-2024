@@ -8,29 +8,14 @@ import SuccessMessage from './SuccessMessage';
 import SubmitButton from './SubmitButton';
 import ErrorWarning from './ErrorWarning';
 
-// export const fieldStyles =
-//   'w-full px-4 py-2 bg-accents-regular box-border  text-base text-paper-light font-paragraph  rounded-sm  focus:outline-none placeholder-type-light placeholder:font-neutralface focus:placeholder-accents-light placeholder:text-sm placeholder:tracking-wider focus:border-accents-regular focus:ring-4 focus:ring-accents-light';
-
 export const fieldStyles =
   'w-full px-4 py-2 bg-paper-light box-border  text-base text-type-regular font-paragraph  rounded-lg  focus:outline-none placeholder-type-light placeholder:font-neutralface focus:placeholder-accents-light placeholder:text-sm placeholder:tracking-wider focus:border-accents-regular focus:ring-4 focus:ring-accents-light';
-
-// const ErrorWarning = ({ message }) => {
-//   return (
-//     <div className="flex gap-1 text-xs items-center">
-//       <span className="bg-paper-light rounded-full p-1">
-//         <WarningTriangle className="text-red-600" />
-//       </span>
-//       <p className="text-red-600">{message}</p>
-//     </div>
-//   );
-// };
 
 const ContactForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    setError,
     formState: { isValid, isSubmitSuccessful },
   } = useForm<FormData>({
     resolver: zodResolver(EmailSchema),

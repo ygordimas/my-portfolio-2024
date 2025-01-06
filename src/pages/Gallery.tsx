@@ -22,6 +22,7 @@ type ImagesType = {
 import { abstracts } from '../db/abstracts';
 import { illustrations } from '../db/illustrations';
 import { gameart } from '../db/gameart';
+import { artandillustration } from '../db/artandillustration';
 import getProjectsList from '../utils/getProjectsList';
 
 const Gallery = () => {
@@ -31,8 +32,8 @@ const Gallery = () => {
   const galleryId = params.galleryId;
 
   const galleryFinder = () => {
-    if (galleryId === 'abstracts') return abstracts;
-    else if (galleryId === 'illustrations') return illustrations;
+    if (galleryId === 'illustrations') return illustrations;
+    else if (galleryId === 'abstracts') return abstracts;
     else return gameart;
   };
   return (

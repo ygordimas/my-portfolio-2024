@@ -12,7 +12,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <div className="flex w-full h-full relative font-paragraph">
         <Header />
         <div
-          className={`${location.pathname !== '/' && `pt-24 lg:pt-28 px-2 pb-8`} box-border grow w-full`}
+          className={`${location.pathname !== '/' && `pt-24 lg:pt-28 px-2 pb-8`} box-border w-full`}
         >
           {children}
         </div>

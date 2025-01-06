@@ -39,14 +39,14 @@ const GalleryGrid = ({ projects }: GalleryType) => {
   };
 
   return (
-    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 1024: 2, 1280: 3 }}>
+    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 1024: 2, 1280: 2 }}>
       <Masonry gutter={'0.5rem'}>
-        {projects.map(({ id, cover, coveralt, title }) => (
+        {projects.map(({ id, title, images }) => (
           <GalleryGridCell
             key={id}
             id={id}
-            cover={cover}
-            coveralt={coveralt}
+            coverImg={images[0].src}
+            coveralt={images[0].alt}
             title={title}
             galleryId={galleryId}
           />

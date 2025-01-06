@@ -10,7 +10,7 @@ import GalleryGridCellImage from './GalleryGridCellImage';
 
 type CellType = {
   id: string;
-  cover: string;
+  coverImg: string;
   coveralt: string;
   title: string;
   galleryId: string;
@@ -18,7 +18,7 @@ type CellType = {
 
 const GalleryGridCell = ({
   id,
-  cover,
+  coverImg,
   coveralt,
   title,
   galleryId,
@@ -51,7 +51,7 @@ const GalleryGridCell = ({
         }}
       >
         <GalleryGridCellOverlay isLaptop={isLaptop} />
-        <GalleryGridCellImage cover={cover} coveralt={coveralt} />
+        <GalleryGridCellImage coverImg={coverImg} coveralt={coveralt} />
       </motion.div>
     </Link>
   );

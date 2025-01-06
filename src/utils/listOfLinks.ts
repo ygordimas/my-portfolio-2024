@@ -10,13 +10,13 @@ const listOfLinks: NavigationLinks = [
     path: '/gallery/illustrations',
   },
   {
-    tag: 'visual art',
+    tag: 'abstract art',
     path: '/gallery/abstracts',
   },
-  {
-    tag: 'game art',
-    path: '/gallery/gameart',
-  },
+  // {
+  //   tag: 'game art',
+  //   path: '/gallery/gameart',
+  // },
   {
     tag: 'contact',
     path: '/contact',

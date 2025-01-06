@@ -61,21 +61,28 @@ const ArtworksNavigationButton = ({
     };
   }, [id]);
 
+  const arrowStyles =
+    ' m-1 box-border  text-accents-light hover:text-accents-regular active:text-accents-dark';
+
   return (
     <Link
       to={`${action === 'previous' ? getPreviousProject(projects, currentIndex) : getNextProject(projects, currentIndex)}`}
+      className="rounded-full bg-paper-light"
+      onClick={() => {
+        window.scrollTo(0, 0);
+      }}
     >
       {action === 'previous' ? (
         <ArrowLeft
           width={arrowSizes}
           height={arrowSizes}
-          className="text-accents-light hover:text-accents-regular active:text-accents-dark"
+          className={arrowStyles}
         />
       ) : (
         <ArrowRight
           width={arrowSizes}
           height={arrowSizes}
-          className="text-accents-light hover:text-accents-regular active:text-accents-dark"
+          className={arrowStyles}
         />
       )}
     </Link>
