@@ -305,7 +305,7 @@ export const illustrations = [
   },
   {
     id: nanoid(),
-    title: 'Lowpoly 3D Illustration',
+    title: 'Lowpoly Helicopter',
     images: [
       {
         src: '/images/3DART/helicopter/helicopter-0.png',
@@ -323,7 +323,7 @@ export const illustrations = [
   },
   {
     id: nanoid(),
-    title: 'Lowpoly 3D Illustration',
+    title: 'Lowpoly Hill',
     images: [
       {
         src: '/images/3DART/hill/hill-0.png',
@@ -341,7 +341,7 @@ export const illustrations = [
   },
   {
     id: nanoid(),
-    title: 'Lowpoly 3D Illustration',
+    title: 'Lowpoly Breakfast Scene',
     images: [
       {
         src: '/images/3DART/breakfasttable/breakfast-0.png',

@@ -7,13 +7,13 @@ const Head = () => {
   return (
     <Link
       to={`/`}
-      className="text-accents-regular hover:text-accents-light flex flex-col items-center"
+      className="text-paper-light hover:text-paper-dark flex flex-col items-center"
     >
       <div className="font-primary text-4xl lg:text-5xl leading-[36px] pt-4">
         Ygor Dimas
       </div>
       <div
-        className={`relative -top-2 lg:-top-3 text-accents-dark font-paragraph text-xs lg:text-sm uppercase tracking-wider`}
+        className={`relative -top-2 lg:-top-3 font-paragraph text-xs lg:text-xs uppercase tracking-wider`}
       >
         3D Artist and Creative Developer
       </div>

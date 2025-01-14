@@ -27,9 +27,9 @@ const Artwork = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll();
 
-  useMotionValueEvent(scrollYProgress, 'change', (val) => {
-    console.log(val);
-  });
+  // useMotionValueEvent(scrollYProgress, 'change', (val) => {
+  //   console.log(val);
+  // });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -62,20 +62,19 @@ const Artwork = () => {
       {isLoading && <div>is Loading...</div>}
       {project && (
         <>
-          <ArtworkImageGallery images={project.images} />
-          <ArtworkDetails
-            tools={project.tools}
-            title={project.title}
-            description={project.description}
-            isLargeScreen={isLargeScreen}
-          />
-
           <ArtworkNavigation
             id={project.id}
             projects={projects!}
             action="previous"
             galleryId={galleryId!}
           />
+          <ArtworkDetails
+            tools={project.tools}
+            title={project.title}
+            description={project.description}
+            isLargeScreen={isLargeScreen}
+          />
+          <ArtworkImageGallery images={project.images} />
         </>
       )}
     </div>

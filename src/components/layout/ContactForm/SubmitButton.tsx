@@ -17,7 +17,7 @@ const SubmitButton = ({ isValid }: { isValid: boolean }) => {
 
   return (
     <motion.button
-      className={`flex gap-2 items-center rounded-lg px-2 py-1.5 justify-center self-end tracking-wider ${isValid ? validStyles : invalidStyles}`}
+      className={`flex gap-2 items-center rounded-lg px-2 py-1.5 justify-center self-start tracking-wider ${isValid ? validStyles : invalidStyles}`}
       type="submit"
       variants={buttonVariants}
       whileHover="hover"

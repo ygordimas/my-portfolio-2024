@@ -13,8 +13,8 @@ const ArtworkDetails = ({
   isLargeScreen: boolean;
 }) => {
   return (
-    <div className="col-start-1 col-span-3 py-6 gap-2 flex justify-start flex-col w-full text-sm border border-accents-regular px-1">
-      <h1 className="self-start text-accents-regular  italic">{title}</h1>
+    <div className="col-start-1 col-span-3 py-10 gap-2 flex justify-center items-center flex-col w-full text-sm px-1">
+      <h1 className=" text-accents-regular  italic">{title}</h1>
       <p className=" text-type-dark">{description}</p>
       <ArtworkTags tools={tools} />
     </div>

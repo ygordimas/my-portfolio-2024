@@ -9,10 +9,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
   // console.log(location);
   return (
     <>
-      <div className="flex w-full h-full relative font-paragraph">
+      <div className="flex flex-col w-full h-full relative font-paragraph justify-between ">
         <Header />
         <div
-          className={`${location.pathname !== '/' && `pt-24 lg:pt-28 px-2 pb-8`} box-border w-full`}
+          className={`${location.pathname !== '/' && `pt-24 lg:pt-26 px-2 pb-8`} box-border w-full grow`}
         >
           {children}
         </div>

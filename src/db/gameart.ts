@@ -65,7 +65,7 @@ export const gameart = [
   },
   {
     id: nanoid(),
-    title: 'Futuristic Tram for the Zium Gallery',
+    title: 'Frog Character',
     images: [
       {
         src: '/images/GAMEART/frog-character/frog-0.png',

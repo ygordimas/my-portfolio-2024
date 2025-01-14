@@ -24,7 +24,7 @@ const Header = () => {
         viewport={{ once: true }}
         className={`fixed mt-2 top-0 w-full text-type-dark h-min z-10 flex justify-between items-center`}
       >
-        <div className="w-[calc(100%-32px)] glassmorph flex px-4 justify-between items-center mx-auto">
+        <div className="w-[calc(100%-32px)] bg-accents-regular rounded-md flex px-4 justify-between items-center mx-auto">
           <Head />
 
           {isLaptop && <HeaderLinks />}

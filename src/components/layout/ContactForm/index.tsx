@@ -9,7 +9,7 @@ import SubmitButton from './SubmitButton';
 import ErrorWarning from './ErrorWarning';
 
 export const fieldStyles =
-  'w-full px-4 py-2 bg-paper-light box-border  text-base text-type-regular font-paragraph  rounded-lg  focus:outline-none placeholder-type-light placeholder:font-neutralface focus:placeholder-accents-light placeholder:text-sm placeholder:tracking-wider focus:border-accents-regular focus:ring-4 focus:ring-accents-light';
+  'w-full px-4 py-2 bg-accents-regular box-border  text-sm text-paper-regular font-paragraph  rounded-lg  focus:outline-none placeholder-paper-dark placeholder:font-paragraph placeholder:uppercase focus:placeholder-accents-light placeholder:text-sm placeholder:tracking-wider focus:border-accents-regular focus:ring-4 focus:ring-accents-light';
 
 const ContactForm = () => {
   const {
@@ -48,7 +48,7 @@ const ContactForm = () => {
         <SuccessMessage />
       ) : (
         <form
-          className="mx-auto flex flex-col items-center gap-2 lg:w-1/2"
+          className="flex flex-col items-center lg:mx-auto gap-2 lg:w-1/2"
           onSubmit={handleSubmit(onSubmit)}
         >
           <FormField

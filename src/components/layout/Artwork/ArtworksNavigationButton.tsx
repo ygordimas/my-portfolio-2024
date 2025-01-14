@@ -12,6 +12,10 @@ type ArtworksNavigationButton = {
   projects: ProjectsProps[];
 };
 
+const NavigationTag = ({ description }: { description: string }) => {
+  return <div className="text-xs">{description}</div>;
+};
+
 const ArtworksNavigationButton = ({
   action,
   projects,
@@ -22,7 +26,7 @@ const ArtworksNavigationButton = ({
 
   const isLargeScreen = useMediaQuery('only screen and (min-width : 1280px)');
   const navigate = useNavigate();
-  const arrowSizes = isLargeScreen ? '4rem' : '2rem';
+  const arrowSizes = isLargeScreen ? '1rem' : '1rem';
 
   const currentIndex = projects.findIndex((element) => element.id === id);
 
@@ -67,7 +71,7 @@ const ArtworksNavigationButton = ({
   return (
     <Link
       to={`${action === 'previous' ? getPreviousProject(projects, currentIndex) : getNextProject(projects, currentIndex)}`}
-      className="rounded-full bg-paper-light"
+      className={`flex items-center ${action !== 'previous' && `flex-row-reverse`}`}
       onClick={() => {
         window.scrollTo(0, 0);
       }}
@@ -84,6 +88,11 @@ const ArtworksNavigationButton = ({
           height={arrowSizes}
           className={arrowStyles}
         />
+      )}
+      {action === 'previous' ? (
+        <NavigationTag description="previous project" />
+      ) : (
+        <NavigationTag description="next project" />
       )}
     </Link>
   );

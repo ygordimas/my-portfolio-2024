@@ -35,20 +35,20 @@ const HeaderLink = ({
   return (
     <NavLink
       to={to}
-      className={`relative text-base uppercase font-paragraph tracking-tight text-type-regular py-1 px-1  mix-blend-normal`}
+      className={`relative text-xs uppercase font-paragraph tracking-tight text-paper-light py-1 px-2  mix-blend-normal`}
       onClick={() => setActiveTab(tag)}
     >
       {toggleActive && (
         <motion.div
           layoutId="active-tag"
-          className="absolute inset-0 bg-accents-light rounded"
+          className="absolute inset-0 bg-accents-light rounded-full"
           transition={activeTabTransition}
         />
       )}
       <motion.span
         className={`z-10 relative ${activeTab === tag && 'font-paragraph text-paper-light'}`}
         initial={{
-          color: '#232323 ',
+          color: '#f8ffff',
         }}
         animate={toggleActive ? { color: '#fcfcfc  ' } : {}}
         transition={activeTabTransition}

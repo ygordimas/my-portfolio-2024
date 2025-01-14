@@ -10,20 +10,21 @@ const Footer = () => {
   const location = useLocation();
   const { isHamburgerMenuOpen } = useGalleryContext();
 
-  const rendersWhen = !isHamburgerMenuOpen && location.pathname === '/';
+  const rendersWhen = !isHamburgerMenuOpen && location.pathname !== '/';
   return (
     <>
-      {rendersWhen && (
+      {/* {rendersWhen && (
         <div className="flex flex-col w-full items-center gap-2 z-40 absolute bottom-0 overflow-hidden">
           <div className="glassmorph self-end mr-2">
             <FooterSocialMediaIcons />
-            {/* <div className=" px-4 font-paragraph ">
-            designed & developed by Ygor Dimas
-          </div> */}
           </div>
           <FooterHorizontalRibbon duration={18} />
         </div>
-      )}
+      )} */}
+      <div className="w-full min-h-48 text-paper-regular bg-accents-regular px-4 py-4 flex flex-col items-end justify-end box-border justify-self-end">
+        <FooterSocialMediaIcons />
+        <p className="text-xs">developed by Ygor Dimas.</p>
+      </div>
     </>
   );
 };

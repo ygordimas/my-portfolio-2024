@@ -3,7 +3,7 @@ import React from 'react';
 
 const FooterSocialMediaIcons = () => {
   return (
-    <div className="flex gap-2 p-4 text-accents-regular">
+    <div className="flex gap-2 text-paper-regular">
       <a href="https://instagram.com/ygordimas" target="_blank">
         <Instagram strokeWidth={2} />
       </a>
