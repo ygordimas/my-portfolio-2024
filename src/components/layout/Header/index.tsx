@@ -1,6 +1,6 @@
 import { NavLink, Link, useLocation, useParams } from 'react-router-dom';
 import { Menu, XmarkSquare, SparkSolid } from 'iconoir-react';
-import { useModalContext } from '../../../services/ModalContext';
+import { useGalleryContext } from '../../../services/GalleryContext';
 import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
 import HamburgerMenu from './HamburgerMenu';
@@ -11,7 +11,7 @@ import HeaderLinks from './HeaderLinks';
 import { useMediaQuery } from '@uidotdev/usehooks';
 
 const Header = () => {
-  const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useModalContext();
+  const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useGalleryContext();
   const [activeTab, setActiveTab] = useState('');
   const isLaptop = useMediaQuery('only screen and (min-width : 1280px)');
   const showHamburgerMenu = isHamburgerMenuOpen && !isLaptop;

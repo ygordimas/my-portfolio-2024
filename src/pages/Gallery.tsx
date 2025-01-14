@@ -1,7 +1,7 @@
 import React from 'react';
 import GalleryGrid from '../components/layout/GalleryGrid';
 import { useParams } from 'react-router-dom';
-import { useModalContext } from '../services/ModalContext';
+import { useGalleryContext } from '../services/GalleryContext';
 
 type ImageType = {
   id: string;
@@ -26,7 +26,7 @@ import { artandillustration } from '../db/artandillustration';
 import getProjectsList from '../utils/getProjectsList';
 
 const Gallery = () => {
-  const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useModalContext();
+  const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useGalleryContext();
 
   const params = useParams();
   const galleryId = params.galleryId;

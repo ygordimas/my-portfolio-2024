@@ -3,12 +3,12 @@ import { Instagram, GithubCircle } from 'iconoir-react';
 import { motion } from 'motion/react';
 import FooterHorizontalRibbon from './FooterHorizontalRibbon';
 import FooterSocialMediaIcons from './FooterSocialMediaIcons';
-import { useModalContext } from '../../../services/ModalContext';
+import { useGalleryContext } from '../../../services/GalleryContext';
 import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
   const location = useLocation();
-  const { isHamburgerMenuOpen } = useModalContext();
+  const { isHamburgerMenuOpen } = useGalleryContext();
 
   const rendersWhen = !isHamburgerMenuOpen && location.pathname === '/';
   return (

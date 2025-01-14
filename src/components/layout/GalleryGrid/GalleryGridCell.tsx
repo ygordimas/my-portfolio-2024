@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import formatTitle from '../../../utils/formatTitle';
 import { motion } from 'motion/react';
-import { useModalContext } from '../../../services/ModalContext';
+import { useGalleryContext } from '../../../services/GalleryContext';
 import { useMediaQuery } from '@uidotdev/usehooks';
 import { EyeSolid } from 'iconoir-react';
 import GalleryGridCellOverlay from './GalleryGridCellOverlay';
@@ -23,7 +23,7 @@ const GalleryGridCell = ({
   title,
   galleryId,
 }: CellType) => {
-  const { setCurrentImageId, setCurrentGalleryName } = useModalContext();
+  const { setCurrentImageId, setCurrentGalleryName } = useGalleryContext();
   const isLaptop = useMediaQuery('only screen and (min-width : 1280px)');
 
   const overlayVariants = {

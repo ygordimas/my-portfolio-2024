@@ -1,4 +1,11 @@
 import { motion } from 'motion/react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
+type ImagesProps = {
+  src: string;
+  alt: string;
+};
 
 const ArtworkImageGallery = ({
   images,
@@ -27,7 +34,7 @@ const ArtworkImageGallery = ({
           <img
             key={index}
             src={image.src}
-            className=" h-auto max-h-screen"
+            className="h-auto max-h-screen"
             alt=""
           />
         );

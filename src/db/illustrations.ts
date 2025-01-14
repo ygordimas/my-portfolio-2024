@@ -9,6 +9,54 @@ export const illustrations = [
         src: '/images/3DART/apwot5/apwot-5-0.jpg',
         alt: '',
       },
+      {
+        src: '/images/3DART/apwot5/apwot-5-1.png',
+        alt: '',
+      },
+      {
+        src: '/images/3DART/apwot5/apwot-5-2.png',
+        alt: '',
+      },
+      {
+        src: '/images/3DART/apwot5/apwot-5-3.png',
+        alt: '',
+      },
+      {
+        src: '/images/3DART/apwot5/apwot-5-4.png',
+        alt: '',
+      },
+      {
+        src: '/images/3DART/apwot5/apwot-5-5.png',
+        alt: '',
+      },
+      {
+        src: '/images/3DART/apwot5/apwot-5-6.png',
+        alt: '',
+      },
+      {
+        src: '/images/3DART/apwot5/apwot-5-7.png',
+        alt: '',
+      },
+      {
+        src: '/images/3DART/apwot5/apwot-5-8.png',
+        alt: '',
+      },
+      {
+        src: '/images/3DART/apwot5/apwot-5-9.png',
+        alt: '',
+      },
+      {
+        src: '/images/3DART/apwot5/apwot-5-10.png',
+        alt: '',
+      },
+      {
+        src: '/images/3DART/apwot5/apwot-5-11.png',
+        alt: '',
+      },
+      {
+        src: '/images/3DART/apwot5/apwot-5-12.png',
+        alt: '',
+      },
     ],
     description: `A set of 3D line art illustrations made with Blender for the fifth issue of a Profound Waste of Time Magazine.`,
     width: 1024,

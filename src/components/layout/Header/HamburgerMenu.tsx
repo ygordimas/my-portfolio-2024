@@ -1,13 +1,13 @@
 import React from 'react';
 import { Menu, XmarkSquare, SparkSolid } from 'iconoir-react';
 import { AnimatePresence, motion } from 'motion/react';
-import { useModalContext } from '../../../services/ModalContext';
+import { useGalleryContext } from '../../../services/GalleryContext';
 import listOfLinks from '../../../utils/listOfLinks';
 import HamburgerLink from './HamburgerLink';
 import { useMediaQuery } from '@uidotdev/usehooks';
 
 const HamburgerMenu = () => {
-  const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useModalContext();
+  const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useGalleryContext();
   const isLaptop = useMediaQuery('only screen and (min-width : 1280px)');
 
   const handleCloseHamburgerMenu = () => {

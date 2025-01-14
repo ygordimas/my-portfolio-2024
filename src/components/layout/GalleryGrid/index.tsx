@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useModalContext } from '../../../services/ModalContext';
+import { useGalleryContext } from '../../../services/GalleryContext';
 import { useParams, Link } from 'react-router-dom';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { motion } from 'motion/react';

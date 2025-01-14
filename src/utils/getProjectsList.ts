@@ -5,9 +5,9 @@ import { artandillustration } from '../db/artandillustration';
 
 const getProjectsList = (path: string) => {
   if (path === 'illustrations') {
-    return artandillustration;
+    return illustrations;
   } else if (path === 'gameart') {
-    return artandillustration;
+    return gameart;
   } else if (path === 'abstracts') {
     return abstracts;
   }
