@@ -39,7 +39,7 @@ const Artwork = () => {
         const result = await projects?.find(
           (element: ProjectsProps) => formatTitle(element.title) === title
         );
-        setProject(result);
+        setProject(result!);
       } catch (error: unknown) {
         if (error instanceof Error) {
           setError(error.message);

@@ -22,8 +22,6 @@ type ImagesType = {
 import { abstracts } from '../db/abstracts';
 import { illustrations } from '../db/illustrations';
 import { gameart } from '../db/gameart';
-import { artandillustration } from '../db/artandillustration';
-import getProjectsList from '../utils/getProjectsList';
 
 const Gallery = () => {
   const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useGalleryContext();
